@@ -4,6 +4,7 @@ import { Slide } from "@/components/animation/slide";
 import Social from "./(root)/_components/social";
 import Hero from "./(root)/_components/hero";
 import Job from "./(root)/_components/job";
+import Projects from "./(root)/_components/projects";
 
 export default async function Home() {
     const profile = await fetchQuery(api.profile.get);
@@ -30,6 +31,7 @@ export default async function Home() {
                 </Slide>
             </section>
             <Job />
+            <Projects />
         </main>
     );
 }

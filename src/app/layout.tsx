@@ -1,10 +1,10 @@
-import Navbar from "@/components/navbar";
 import Providers from "@/components/providers";
 import { gitlabmono, incognito } from "@/fonts/font";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
+import { Navbar } from "@/components/dock";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -24,7 +24,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${incognito.variable} ${geistSans.variable} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
+                className={`${incognito.variable} ${geistSans.variable} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700 relative`}
             >
                 <Providers>
                     <Navbar />
